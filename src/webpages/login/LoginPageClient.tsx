@@ -77,18 +77,23 @@ export default function LoginPageClient() {
 
   if (!isPhantomInstalled) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
-        <div className="bg-white p-8 rounded-lg shadow-md text-center">
-          <h1 className="text-2xl font-bold mb-6">Phantom Wallet Required</h1>
-          <p className="mb-6 text-gray-600">
-            To use this application, you need to install the Phantom Wallet browser extension.
-          </p>
-          <button
-            onClick={handlePhantomInstall}
-            className="bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700"
-          >
-            Install Phantom Wallet
-          </button>
+      <div className="flex h-screen w-screen items-center justify-center bg-white">
+        <div className="flex w-[800px] h-[500px] rounded-lg shadow-2xl overflow-hidden">
+          <div className="w-1/2 bg-black text-white p-8 flex flex-col justify-center">
+            <h1 className="text-3xl font-bold mb-4">Phantom Wallet Required</h1>
+            <p className="text-gray-300">
+              To use this application, you need to install the Phantom Wallet browser extension.
+            </p>
+          </div>
+
+          <div className="w-1/2 bg-white p-8 flex flex-col justify-center items-center">
+            <button
+              onClick={handlePhantomInstall}
+              className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors"
+            >
+              Install Phantom Wallet
+            </button>
+          </div>
         </div>
       </div>
     )
